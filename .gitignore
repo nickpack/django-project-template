@@ -1,4 +1,6 @@
+.sass_cache
+.DS_Store
+.idea
 *.log
 *.pot
 *.pyc
-local_settings.py
