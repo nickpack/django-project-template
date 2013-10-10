@@ -19,14 +19,15 @@ import os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath('..'))
 
-# -- General configuration -----------------------------------------------------
+# -- General configuration -----------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #needs_sphinx = '1.0'
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.todo', 'sphinx.ext.coverage', 'sphinx.ext.pngmath', 'sphinx.ext.viewcode']
+extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.todo',
+              'sphinx.ext.coverage', 'sphinx.ext.pngmath', 'sphinx.ext.viewcode']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -91,7 +92,7 @@ pygments_style = 'sphinx'
 #keep_warnings = False
 
 
-# -- Options for HTML output ---------------------------------------------------
+# -- Options for HTML output ---------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
@@ -171,24 +172,24 @@ html_show_sphinx = False
 htmlhelp_basename = '{{project_name}}doc'
 
 
-# -- Options for LaTeX output --------------------------------------------------
+# -- Options for LaTeX output --------------------------------------------
 
 latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
-'papersize': 'a4paper',
+    # The paper size ('letterpaper' or 'a4paper').
+    'papersize': 'a4paper',
 
-# The font size ('10pt', '11pt' or '12pt').
-#'pointsize': '10pt',
+    # The font size ('10pt', '11pt' or '12pt').
+    #'pointsize': '10pt',
 
-# Additional stuff for the LaTeX preamble.
-#'preamble': '',
+    # Additional stuff for the LaTeX preamble.
+    #'preamble': '',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'project_name.tex', u'\\{\\{project\\_name\\}\\} Documentation',
-   u'Nick Pack', 'manual'),
+    ('index', 'project_name.tex', u'\\{\\{project\\_name\\}\\} Documentation',
+     u'Nick Pack', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -212,7 +213,7 @@ latex_documents = [
 #latex_domain_indices = True
 
 
-# -- Options for manual page output --------------------------------------------
+# -- Options for manual page output --------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
@@ -225,15 +226,15 @@ man_pages = [
 #man_show_urls = False
 
 
-# -- Options for Texinfo output ------------------------------------------------
+# -- Options for Texinfo output ------------------------------------------
 
 # Grouping the document tree into Texinfo files. List of tuples
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'project_name', u'{{project_name}} Documentation',
-   u'Nick Pack', 'project_name', 'One line description of project.',
-   'Miscellaneous'),
+    ('index', 'project_name', u'{{project_name}} Documentation',
+     u'Nick Pack', 'project_name', 'One line description of project.',
+     'Miscellaneous'),
 ]
 
 # Documents to append as an appendix to all manuals.
@@ -249,7 +250,7 @@ texinfo_documents = [
 #texinfo_no_detailmenu = False
 
 
-# -- Options for Epub output ---------------------------------------------------
+# -- Options for Epub output ---------------------------------------------
 
 # Bibliographic Dublin Core info.
 epub_title = u'{{project_name}}'

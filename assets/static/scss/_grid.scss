@@ -21,8 +21,8 @@
 @media only screen and (max-width: 959px) {
   @include grid($tablet-container-width, $column-count, $gutter);
 
-  .container { 
-    width: $tablet-container-width; 
+  .container {
+    width: $tablet-container-width;
     & .alpha { margin-right: 10px; }
     & .omega { margin-left: 10px; }
   }
@@ -56,7 +56,7 @@
     & .two-thirds,
     & .one-half,
     & .one-quarter,
-    & .three-quarters 
+    & .three-quarters
     { width: $mobile-column-width; }
 
     .column, .columns {
