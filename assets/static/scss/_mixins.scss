@@ -82,8 +82,8 @@
 @mixin box-sizing($boxsize) {
   -webkit-box-sizing: $boxsize;
   -moz-box-sizing: $boxsize;
-  -ms-box-sizing: $boxsize; 
-  -o-box-sizing: $boxsize; 
+  -ms-box-sizing: $boxsize;
+  -o-box-sizing: $boxsize;
   -khtml-box-sizing: $boxsize;
   box-sizing: $boxsize;
 }

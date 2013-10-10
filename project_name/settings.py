@@ -22,7 +22,7 @@ DATABASES = {
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = [
-    '%s.dev' % os.path.dirname(__file__)
+    '{{ project_name }}.dev'
 ]
 
 TIME_ZONE = 'Europe/London'
@@ -66,7 +66,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'django.core.context_processors.tz',
     'django.contrib.messages.context_processors.messages',
-    'django.core.context_processors.request'
+    'django.core.context_processors.request',
+    'sekizai.context_processors.sekizai'
 )
 
 TEMPLATE_LOADERS = (
@@ -103,6 +104,7 @@ DJANGO_APPS = (
 
 THIRD_PARTY_APPS = (
     'south',
+    'sekizai'
 )
 
 LOCAL_APPS = (
