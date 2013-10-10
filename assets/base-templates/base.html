@@ -1,0 +1,30 @@
+{% load sekizai_tags %}
+{% include "partials/base-css.html" %}
+{% include "partials/head-js.html" %}
+{% include "partials/ga.html" %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block pagetitle %}{% endblock %} / {{ project_name }}</title>
+        <meta name="description" content="{% block metadescription %}{% endblock %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% render_block "css" %}
+        {% render_block "headjs" %}
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        {% block content %}
+            <h1>Oh, herro - This is {{ project_name }}.</h1>
+            <p>I'm so ronery, so ronery. So ronery and sadry arone. There's no one, just me onry. Sitting on my rittle throne</p>
+            <p>Seems like no one takes me seriousry</p>
+        {% endblock %}
+        {% render_block "bodyjs" %}
+    </body>
+</html>

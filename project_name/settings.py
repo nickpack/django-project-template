@@ -21,7 +21,9 @@ DATABASES = {
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '%s.dev' % os.path.dirname(__file__)
+]
 
 TIME_ZONE = 'Europe/London'
 
@@ -44,7 +46,7 @@ STATIC_ROOT = os.path.join(ASSETS_DIR, '/static')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(ASSETS_DIR, '/static/base-templates')
+    os.path.join(ASSETS_DIR, '/static/')
 )
 
 STATICFILES_FINDERS = (
@@ -52,7 +54,7 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder'
 )
 
-FIXTURE_DIRS = (os.path.join(PROJECT_DIR, '../fixtures'))
+FIXTURE_DIRS = (os.path.join(ASSETS_DIR, '/fixtures'))
 
 SECRET_KEY = r"{{ secret_key }}"
 
@@ -86,7 +88,7 @@ ROOT_URLCONF = '{{project_name}}.urls'
 WSGI_APPLICATION = '{{project_name}}.wsgi.application'
 
 TEMPLATE_DIRS = (
-
+    os.path.join(ASSETS_DIR, '/base-templates')
 )
 
 DJANGO_APPS = (
